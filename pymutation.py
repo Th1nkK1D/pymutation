@@ -1,9 +1,9 @@
 import math
 
-source = ['1','2','3','4','5','6']
+source = ['1','2','3','4','5','6','7','8']
 target = []
 
-f = open('output.txt','a')
+f = open('output.txt','w')
 
 def permutate(source, target):
     if len(source) > 0:
@@ -17,4 +17,9 @@ def permutate(source, target):
         f.write(",".join(target))
         f.write("\n")
 
+print(len(source),"items ->",math.factorial(len(source)),"probabilities")
+print("processing...")
+
 permutate(source,target)
+
+print("done")
